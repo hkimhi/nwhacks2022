@@ -15,23 +15,21 @@ const NavItemContainer = styled.div`
 
 const NavItem = styled(Link)`
     color: white;
-    padding-left: 20px;
+    padding-left: 24px;
     display: block;
-    text-decoration: none;
     font-size: 18px;
     padding-bottom: 16px;
 `;
 
 const UserName = styled.p`
     width: 60%;
-    padding: 10px;
+    padding: 12px;
     margin: 20px auto;
     text-align: center;
-    color: white;
     background-color: #0b5394ff;
     border-radius: 10px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
 `;
 
 const Nav = () => {
