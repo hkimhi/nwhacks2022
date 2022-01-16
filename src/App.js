@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 import {
@@ -9,6 +8,7 @@ import {
 } from "react-router-dom";
 
 import Home from "./components/Home"
+import Todo from './components/Todo'
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
         <Routes>
           <Route path ="/" element={<Home/>} />
           <Route path ="/home" element={<Home/>} />
+          <Route path='/todo' element={<Todo />} />
 
           <Route path="*" element={<Navigate to="/home"/>} />
         </Routes>
