@@ -21,7 +21,16 @@ const Button = styled.button`
     display: inline-block;
 `;
 
-const ItemList = (props) => {
+interface ItemProps {
+    title: string,
+    text?: string,
+}
+interface ItemListProps {
+    title?: string,
+    items: Array<ItemProps>,
+}
+
+const ItemList = (props: ItemListProps) => {
     return (
         <>
             <div style={{ padding: '16px' }}>
@@ -29,7 +38,7 @@ const ItemList = (props) => {
                     <SectionTitle>{props.title}</SectionTitle>
                 </div>
 
-                {props.items.map((item, index) => <Item key={index} title={item.title}>{item.text}</Item>)}
+                {props.items && props.items.map((item, index) => <Item key={index} title={item.title}>{item.text}</Item>)}
 
                 <div style={{ textAlign: 'center' }}>
                     <Button as={Link} to="/todo">See More</Button>
@@ -52,7 +61,7 @@ const ItemTitle = styled.h3`
     margin-bottom: 0;
 `;
 
-const Item = (props) => {
+const Item: React.FC<ItemProps> = (props) => {
     return (
         <ItemContainer>
             <ItemTitle>{props.title}</ItemTitle>

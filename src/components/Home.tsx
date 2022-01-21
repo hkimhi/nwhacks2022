@@ -52,7 +52,7 @@ const Home = () => {
         </div>
 
         <div style={{ marginLeft: '55%' }}>
-          <ItemList title="Upcoming" items={upcomingItems} itemHeight={'10px'} />
+          <ItemList title="Upcoming" items={upcomingItems} />
         </div>
       </MainContainer>
     </Container>
